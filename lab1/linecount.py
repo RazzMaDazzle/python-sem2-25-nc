@@ -1,3 +1,5 @@
+#!/usr/bin/python3.13
+
 #Control and file variables
 count = 0
 condition = True
