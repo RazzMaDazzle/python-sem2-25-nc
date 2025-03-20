@@ -9,6 +9,7 @@ class Point:
 
     def draw(self):
         print(self._symbol)
+        print()
 
 class Rectangle(Point):
 
@@ -22,6 +23,7 @@ class Rectangle(Point):
             for w in range(self._Wsize):
                 print(self._symbol, end="")
             print("")
+        print()
 
 class Triangle(Point):
 
@@ -36,7 +38,7 @@ class Triangle(Point):
                 print(self._symbol, end="")
             self._count = self._count + 1
             print("")
-
+        print()
 class Diamond(Point):
 
     def __init__(self, symbol="#", width=10):
@@ -56,6 +58,7 @@ class Diamond(Point):
             for w4 in range((self._width + 1 - h)*2 - 1):
                 print(self._symbol, end="")
             print()
+        print()
 
                 
 class Square(Rectangle):
@@ -68,5 +71,6 @@ class Square(Rectangle):
             for w in range(self._size):
                 print(self._symbol, end="")
             print("")
+        print()
 
     
