@@ -3,6 +3,8 @@ from shapes import *
 import sys
 
 if __name__ == "__main__":
+    exe = []
+
     try:
         file = open(sys.argv[1])
     except:
@@ -16,21 +18,14 @@ if __name__ == "__main__":
         
         try:
             
-            if (shape[0] == "P"):
-                exe = Point(shape[1])
-                exe.draw()
-            elif (shape[0] == "D"):
-                exe = Diamond(shape[1], int(shape[2]))
-                exe.draw()
+            if (shape[0] == "D"):
+                exe.append(Diamond(shape[1], int(shape[2])))
             elif (shape[0] == "R"):
-                exe = Rectangle(shape[1], int(shape[2]), int(shape[3]))
-                exe.draw()
+                exe.append(Rectangle(shape[1], int(shape[2]), int(shape[3])))
             elif (shape[0] == "S"):
-                exe = Square(shape[1], int(shape[2]))
-                exe.draw()
+                exe.append(Square(shape[1], int(shape[2])))
             elif (shape[0] == "T"):
-                exe = Triangle(shape[1], int(shape[2]))
-                exe.draw()
+                exe.append(Triangle(shape[1], int(shape[2])))
             else:
                 print(f"Couldn't find a matching shape.")
                 print(f"Valid shapes are, (P)oint, (D)iamond, (R)ectangle, (S)quare, and (T)riangle.")
@@ -38,5 +33,8 @@ if __name__ == "__main__":
         
         except:
             raise Exception(f"The shape {shape}, was formated incorrectly.")
+
+    for i in exe:
+        i.draw()
         
     file.close()
