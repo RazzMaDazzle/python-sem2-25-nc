@@ -1,0 +1,5 @@
+#id|name|country|species|class|level
+1|Edward|Calenfer|Human|Barkeeper|14
+2|Erin|Liscor|Human|Magical-Innekeeper|45
+3|Onieva|Pallass|Drake|Alchemist|58
+4|Ceria|Springwalker|Half-Elf|Artic-Cryomancer|38
